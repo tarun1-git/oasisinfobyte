@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Subhash Chandra Bose</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            color: #f8f8f8;
+            font-weight: 300;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .hero-image {
+            flex: 1;
+            max-width: 400px;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .quote {
+            font-style: italic;
+            color: #667eea;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section-content {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+        }
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .timeline-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .timeline-year {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .gallery-caption {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .title {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Netaji Subhash Chandra Bose</h1>
+            <p class="subtitle">The Fearless Freedom Fighter and Visionary Leader</p>
+        </header>
+        <section class="hero-section">
+            <div class="hero-image">
+                <img src="5089191.webp" alt="Portrait of Subhash Chandra Bose in military uniform with determined expression during India's freedom struggle">
+            </div>
+            <div class="hero-content">
+                <h2 class="section-title">The Lion of India</h2>
+                <p class="section-content">
+                    Subhash Chandra Bose, affectionately known as Netaji, was one of India's most prominent and respected freedom fighters. His unwavering determination, revolutionary spirit, and extraordinary leadership qualities made him a legendary figure in India's struggle for independence. Born on January 23, 1897, in Cuttack, Odisha, Bose dedicated his entire life to the cause of freeing India from British colonial rule.
+                </p>
+                <p class="quote">
+                    "Give me blood, and I shall give you freedom!"
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Early Life and Education</h2>
+            <p class="section-content">
+                Subhash Chandra Bose was born to Prabhavati Devi and Janakinath Bose, a successful lawyer. He was the ninth child among fourteen siblings. From an early age, Bose showed exceptional academic abilities and a strong sense of patriotism. He completed his education in Calcutta and later went to England to appear for the Indian Civil Services examination, where he secured the fourth position. However, his patriotic fervor led him to resign from the prestigious civil service to join India's freedom movement.
+            </p>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Revolutionary Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1921-1940</div>
+                    <p>Worked with Indian National Congress, became President twice, but later parted ways due to ideological differences with Mahatma Gandhi</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1941</div>
+                    <p>Escaped house arrest in Calcutta and made a daring journey through Afghanistan to Germany to seek international support</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1943</div>
+                    <p>Formed the Azad Hind Government and Indian National Army (INA) with the motto "Delhi Chalo"</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1944-1945</div>
+                    <p>Led the INA in military campaigns against British forces in Northeast India</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">Leadership and Vision</h2>
+            <p class="section-content">
+                What I admire most about Netaji is his revolutionary approach to freedom struggle. While many leaders believed in non-violence, Bose understood that diverse strategies were needed. His establishment of the Azad Hind Government and the Indian National Army showed his exceptional organizational skills and military strategy. His famous words, "Give me blood, and I shall give you freedom," ignited the passion of millions of Indians.
+            </p>
+            <p class="section-content">
+                Bose's vision extended beyond just political freedom. He advocated for women's empowerment by forming the Rani of Jhansi Regiment, where women served as soldiers in the INA. His progressive ideas about social reform, economic development, and national unity continue to inspire generations.
+            </p>
+        </section>
+        <footer class="footer">
+            <p>© 2024 Tribute to Netaji Subhash Chandra Bose | Created with respect and admiration</p>
+            <p>"One individual may die for an idea, but that idea will, after his death, incarnate itself in a thousand lives." - Netaji</p>
+        </footer>
+    </div>
+</body>
+</html>
+
