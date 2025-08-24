@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #41696e;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            background-color: #75564a98;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 25px;
+            padding-left: 15px;
+        }
+        .display {
+            background-color: #eaeaea;
+            border: none;
+            border-radius: 5px;
+            font-size: 35px;
+            padding: 10px;
+            text-align: right;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #0b4c77;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ca1b1b;
+        }
+        .button:active {
+            transform: scale(0.98);
+        }
+        .button.operator {
+            background-color: #ec760fe3;
+        }
+        .button.operator:hover {
+            background-color: #38c256;
+        } 
+         .button.operator.c {
+            background-color: #dd0d0def;
+        }
+        .button.operator.c:hover {
+            background-color: #ad2a23;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" disabled>
+        <div class="grid">
+            <button class="button operator c" id="clear">C</button>
+            <button class="button operator" id="divide">÷</button>
+            <button class="button operator" id="multiply">X</button>
+            <button class="button operator" id="subtract">-</button>
+            <button class="button" id="seven">7</button>
+            <button class="button" id="eight">8</button>
+            <button class="button" id="nine">9</button>
+            <button class="button operator" id="add">+</button>
+            <button class="button" id="four">4</button>
+            <button class="button" id="five">5</button>
+            <button class="button" id="six">6</button>
+            <button class="button operator" id="equals">=</button>
+            <button class="button" id="one">1</button>
+            <button class="button" id="two">2</button>
+            <button class="button" id="three">3</button>
+            <button class="button" id="zero">0</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const buttons = document.querySelectorAll('.button');
+        let currentInput = '';
+        let operator = '';
+        let firstOperand = null;
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.innerText;
+                if (value === 'C') {
+                    clear();
+                } else if (value === '=') {
+                    calculate();
+                } else if (['+', '-', 'X', '÷'].includes(value)) {
+                    setOperator(value);
+                } else {
+                    appendToInput(value);
+                }
+            });
+        });
+        function appendToInput(value) {
+            currentInput += value;
+            display.value = currentInput;
+        }
+        function setOperator(value) {
+            if (currentInput === '') return;
+            if (firstOperand === null) {
+                firstOperand = parseFloat(currentInput);
+            } else {
+                calculate();
+            }
+            operator = value;
+            currentInput = '';
+        }
+        function calculate() {
+            if (firstOperand === null || currentInput === '') return;
+            const secondOperand = parseFloat(currentInput);
+            let result;
+            switch (operator) {
+                case '+':
+                    result = firstOperand + secondOperand;
+                    break;
+                case '-':
+                    result = firstOperand - secondOperand;
+                    break;
+                case 'X':
+                    result = firstOperand * secondOperand;
+                    break;
+                case '÷':
+                    result = firstOperand / secondOperand;
+                    break;
+                default:
+                    return;
+            }
+            display.value = result;
+            currentInput = '';
+            firstOperand = result;
+        }
+        function clear() {
+            currentInput = '';
+            operator = '';
+            firstOperand = null;
+            display.value = '';
+        }
+    </script>
+</body>
+</html>
