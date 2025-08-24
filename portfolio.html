@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio||Tarun Jangid</title>
+</head>
+<style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+    .profile img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid rgb(8, 201, 201);
+        margin-bottom: 15px;
+    }
+    header{
+        background-color: rgb(13, 33, 63);
+        color: rgb(78, 143, 180);
+        text-align: center;
+        padding: 20px;
+    }
+    .profile{ 
+        margin: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-data p{
+        font-size: 20px;
+        max-width: 700;
+        margin: auto;
+    }
+    .profile-data h1{
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+    /* navigation start from here*/
+    nav{
+      background-color: rgb(30, 131, 161);
+      padding: 20px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+        flex-wrap: wrap;
+    }
+    nav ul li{
+        margin: 10px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color  0.3s;
+    }
+    nav ul li a :hover{
+        color: rgb(196, 43, 43);
+    }
+    section{
+        padding: 12px ;
+    }
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 10px;
+        }
+        
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+        color: #2c3d4e;
+        font-size: 35px;
+        }
+    .paragraph{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        /* skill start from here*/
+        .Sgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .Scard {
+            background: white;
+            padding: 15px;
+            border-radius: 2px;
+            box-shadow:  0 5px 10px rgba(23, 150, 235, 0.473);
+            transition: transform 0.3s;
+        }
+        .Scard:hover {
+            transform: translateY(-5px);
+        }
+        .Scard h3 {
+            color: #1c96e7;
+            margin-bottom: 2px;
+        }
+        /*certificates start from here*/
+          .certification{
+            background-color: rgba(74, 104, 143, 0.411);
+            padding: 80px 0;
+            color: black;
+        }
+        .certificates p{
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #050505;
+        }
+        .C-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+         .C-card {
+            background-color: rgba(46, 104, 119, 0.075);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px rgba(31, 135, 167, 0.952);
+            transition: transform 0.3s;
+            padding: 25px;
+        }
+        .C-card:hover {
+            transform: translateY(-5px);
+        }
+        .C-card img {
+            width: 350px;
+            height: 230px;
+            margin-bottom: 20px;
+        }
+
+         /* Contact start from here */
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            justify-content: center;
+        }
+        
+        .C1card {
+            background: rgba(62, 83, 94, 0.158);
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(40, 167, 199, 0.425);
+            min-width: 250px;
+            text-align: center;
+        }
+        
+        .C1card i {
+            font-size: 10px;
+            margin-bottom: 3px;
+            display: block;
+        }
+        /* resume download*/
+    .link {
+        display: inline-block;
+        background-color: rgb(56, 14, 243);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 20px;
+        }
+
+
+
+</style>
+<body>
+    <header>
+        <div class="profile ">
+            <img src="WhatsApp_Image_2023-03-02_at_10.03.12-removebg-preview.png" alt="profile pic" >
+          <div class="profile-data">
+              <h1> Tarun Kumar Jangid</h1>
+              <p>Frontend Developer</p>
+          </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#Certification">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <div class="detail">
+               <h2>About me</h2>
+            </div>
+            <div class="paragraph">
+              <p>
+                Web designer committed to developing elegant user interfaces that raise the bar for utility and design.
+                Skilled in programming ( HTML,
+                CSS, JAVASCRIPT, PYTHON ) and use of Excel and MS-Word.
+              </p>
+            </div>
+        </div>
+    </section>
+     <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="Sgrid">
+                <div class="Scard">
+                    <h3>HTML & CSS</h3>
+                    <p>Semantic HTML5 markup and modern CSS techniques including Flexbox and Grid</p>
+                </div>
+                <div class="Scard">
+                    <h3>JavaScript</h3>
+                    <p>ES6+ features, DOM manipulation, and interactive web elements</p>
+                </div>
+                <div class="Scard">
+                    <h3>Python</h3>
+                    <p>Developing a stock price predictor using Machine Learing and AI
+                       chatbot with natural language processing.
+                    </p>
+                </div>
+                <div class="Scard">
+                    <h3>Excel & MS-Word</h3>
+                    <p>Organizing and anlyzing data performing calculation text formatting
+                        inserting image.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section id="Certification">
+        <div class="certificates">
+            <h2>Certificates</h2>
+            <div class="C-grid">
+                <div class="C-card">
+                    <a href="https://coursera.org/verify/YRLJAEWKVQQE"><img src="AI for everyone.jpg" alt="AI for everyone"></a> 
+                    <p> AI for everyone</p>
+                </div>
+                <div class="C-card">
+                    <a href="https://coursera.org/verify/Y2J4D3HZAEZ9"><img src="Coursera DV.jpg" alt="Data visualization"></a> 
+                    <p>Data Visualization</p>
+                </div>
+                <div class="C-card">
+                    <a href="https://www.mygreatlearning.com/certificate/RYPDATMB"><img src="html certicate.jpg" alt="HTML"></a> 
+                    <p>HTML Hindi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+             <h2>Get In Touch</h2>
+            <div class="info">
+                <div class="C1card">
+                    <p>✉️</p>
+                    <h3>Email</h3>
+                    <p>tarunrawat4645@gmail.com</p>
+                </div>
+                <div class="C1card">
+                    <p>📱</p>
+                    <h3>Phone</h3>
+                    <p>+91-6377924645</p>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section id="resume">
+        <div class="container">
+            <h2>My Resume</h2>
+            <div class="Dresume">
+                <div>
+                    <a href="TarunKumar Jangid_InternshalaResume.pdf" class="link">Download PDF Resume</a>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <p><strong>Bachelor of Technology in Computer Science & Artificial Intelligence</strong>(pursuing)</p>
+                    <p>Vivekananda Global University (jaipur), 2022-2026</p>
+                </div><br>
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <div>
+                        <p>Fresher</p>
+                     <br>
+                    </div>
+                    <div>
+                        <h3>Project & Internship</h3>
+                       <ul> 
+                       <li><p><strong>Internship</strong>-OASYS INFOBYTE</p></li>
+                       <li><p><strong>Project</strong></p></li></ul>
+                        <p>Landing Page</p><a href="landing page.html">View Project</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
