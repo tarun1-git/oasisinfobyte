@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTHING | come to play</title>
+    <style>
+        * {
+            margin-top: 5px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo img {
+            margin: 5px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img {
+            font-size: 1;
+            font-weight: 700;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        header {
+            background-color: #718397;
+            color: white;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+        }
+
+        .header logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+        }
+        .Acontainer{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        span {
+            font-size: 25px;
+            color: rgb(40, 63, 104);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .second {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 80px;
+            text-align: center;
+        }
+
+        .second p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .second h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .on {
+            display: inline-block;
+            background-color: rgb(199, 31, 31);
+            color: whitesmoke;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .on:hover {
+            background-color: #2dc73a;
+        }
+        /* feature start from here */
+        .feature {
+            background-color: rgba(74, 104, 143, 0.411);
+            padding: 80px 0;
+            color: black;
+        }
+
+        .feature-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: whitesmoke;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 500px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* product strat form here  */
+        .product {
+            padding: 80px 0;
+            background: linear-gradient(70deg, #5ea2cf, #054b4b);
+        }
+
+        .Pgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .Pcard {
+            background-color: rgb(36, 121, 114);
+            border-radius: 10px 10px 10px 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin: auto;
+        }
+
+        .Pcard :hover {
+            transform: translateY(-5px);
+        }
+
+        .image {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            align-items: center;
+            padding-left: 20px;
+            margin: auto;
+        }
+
+        .image img {
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px 10px 10px 10px;
+
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        .info h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #222f3b;
+        }
+
+        .info p {
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        /* about start from here*/
+
+        .about {
+            padding: 80px 0;
+            background-color: rgb(200, 209, 209);
+        }
+
+        .Aimage {
+            border-radius: 8px;
+            overflow: hidden;
+            padding-left: 60px;
+        }
+
+        .Bcontainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .Aimage img {
+            width: 500px;
+            height: 500px;
+            display: block;
+        }
+
+        .Bcontent h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .Bcontent p {
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            padding-left: 20px;
+        }
+        /* state box start from here */
+        .state {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+        }
+        .Sgrid{
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: grid;
+            gap: 30px;
+            text-align: center;
+        }
+        .Sitem h3{
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .Sitem p{
+            font-size: 20px;
+        }
+        /* contact start from here*/
+        .contact{
+            background-color: rgb(255, 255, 255);
+            padding: 80px 0;
+        }
+        .Ccontainer{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .Cinfo h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: darkslategrey;
+            padding-left: 15px;
+        }
+         .Cinfo p {
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+
+        .details {
+            margin-top: 30px;
+        }
+
+        .Cdetail {
+            display: -moz-inline-grid;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .Cdetail span{
+            font-size: 20px;
+        }
+        .Cdetail img {
+            margin: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .Cform {
+            background-color: #e2e5e9;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .Cgroup {
+            margin-bottom: 20px;
+        }
+
+        .Cgroup label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .Cgroup input,
+        .Cgroup textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .Cgroup textarea {
+            height: 150px;
+        }
+        /* footer start from here */
+        footer{
+            background-color: #2c3e50;
+            border-radius: 5px;
+        }
+        .foot{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }    
+        .listing{
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            font-size: 15px;
+        }
+        ul li {
+            margin-left: 15px;
+        }
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 200;
+            transition: color 0.3s;
+            font-size: 15px;
+        }
+        ul li a:hover {
+            color: #3498db;
+        }
+        .tagline p{
+            color: white;
+            font-size: 15px;
+        }
+        .tagline h4{
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+         .links {
+            display: flex;
+            gap: 15px;
+        }
+        .links a {
+             width: 17px;
+            height: 17px;
+            background-color: #34495e;
+            padding: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between ;
+            transition: background-color 0.3s;
+        }
+
+        .links a:hover {
+            background-color: #3498db;
+        }
+        .copyright{
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="img">
+                    <img src="https://imgs.search.brave.com/GYoaEwhCPVM36XXwocwHcE5FADCd3RcsMm3Q1KYe_bQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3LmNl/bGxpY29tc29mdC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMDIvTm90aGlu/Zy1sb2dvLnBuZz9m/aXQ9MTkyMCwxMjc5/JnNzbD0x"
+                        width="90" height="70" alt="nothing logo">
+                    <span>NOTHING</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="second">
+        <div class="Acontainer">
+            <h1>Innovation in Every Hand</h1>
+            <p>Discover our premium mobile phones with cutting-edge technology, crafted for those who demand excellence.
+            </p>
+            <div><a href="#products" class="on">Explore Products</a>
+            </div>
+        </div>
+    </section>
+    <section id="feature">
+        <div class="Acontainer">
+            <h2 class="feature-title">Why Choose Nothing</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/gm8UM05RSsrLgxyto1bZl6itkt-neeyYJ1ehQU9yRKo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZm9uZWFyZW5h/LmNvbS9ibG9nL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzA2/L1NuYXBkcmFnb24t/OHMtR2VuLTQtMTAy/NHg1NTcuanBn"
+                        alt="Snapdragon 8s Gen 4">
+                    <h3> Snapdragon 8s Gen 4 processor</h3>
+                    <p> Nothing Phones are comes with latest processor Snapdragon 8s Gen 4. This processor is based on
+                        4nm technology and includes a Kryo CPU, an Adreno GPU, and an improved ISP that deliver 36% more
+                        power,
+                        88% quicker graphics, and 60% improved AI task handling when compared with the previous model.
+                        The Snapdragon 8s Gen 4 features a Cortex-X4 prime core clocked at 3.2GHz, supported by
+                        Cortex-A720 and A520 cores.</p>
+                </div>
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/NdKSQtYIPeaK97LZHaTuflvfN4wLx5RRui30kpLeCBw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YW5kcm9pZGF1dGhv/cml0eS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjIvMDcv/bm90aGluZy1waG9u/ZS0xLWdseXBoLW9u/LWNhbWVyYS1zY2Fs/ZWQuanBlZw"
+                        alt="Glyph Interface on the back of the phon">
+                    <h3>Glyph back</h3>
+                    <p>The design features 900 small LEDs on the back which uses the Glyph Interface to make rear
+                        LEDs light up in sync with the phone sounds. These 'glyph lights' also light up to show the
+                        phone's charging status. The phone's frame consists of recycled aluminum with additional plastic
+                        components
+                        that are 50% made from bio-based or post-consumer recycled materials</p>
+                </div>
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/fBiIRo63XXqO6Qq4ukwrLlq_gryvQOJZcRp5gp0BcTc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0LzZr/a3ZSckprZVBYVFJo/Z2RodXVGUE4uanBn"
+                        alt="Display">
+                    <h3>High Resolution Display</h3>
+                    <p> The screen can get as bright as 1200 nits and supports displaying 1 billion colors.
+                        OLED touchscreen with HDR10+ support with a 120 Hz refresh rate </p>
+                </div>
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/yIRgG_4ylZzJOgnqFKCx6l_6EIasK0FtXqpdC1MWdJo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZXRh/cGl4ZWwuY29tL2Fz/c2V0cy91cGxvYWRz/LzIwMjUvMDMvbm90/aGluZy1waG9uZS0z/YS1zZXJpZXMtOC04/MDB4NDIwLmpwZw"
+                        alt="High pixel camera">
+                    <h3>High Pixel cameras</h3>
+                    <p> The main camera supports both optical image stabilization and electronic image stabilization and
+                        is capable of recording 4K video at 30 fps and FHD video at 60 fps.The phones have
+                        a dedicated telephoto lens, and uses digital zoom to take close-up shots. There is a red LED
+                        on the back of the phone that lights up when video is recorded.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="product">
+        <div class="Acontainer">
+            <h2 class="feature-title">Our Products</h2>
+            <div class="Pgrid">
+                <div class="Pcard">
+                    <div class="image">
+                        <img src="https://imgs.search.brave.com/UBZBPPHKAYh-rDemZI6pNvrdRf_dWK1p3qfwI0Lhf8U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vMWwzR2Fn/SUVQZjlOMWE4NDhl/cm5PVlFxaFJwVUFm/eGFMOHcxR2hKNmdk/SS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/TG0xbC9aR2xoTFdG/dFlYcHZiaTVqL2Iy/MHZhVzFoWjJWekwx/TXYvWVhCc2RYTXRi/V1ZrYVdFdC9iR2xp/Y21GeWVTMXpaWEoy/L2FXTmxMVzFsWkds/aEx6QTUvTW1NeU1q/RXhMVGhrWkRjdC9O/R1EwTnkxaVpHWm1M/VGcyL01HVm1ObVV5/TmpBeE9DNWYvWDBO/U01Dd3dMREUwTmpR/cy9OakF3WDFCVU1G/OVRXREUwL05qUmZW/akZmWDE4dWFuQm4"
+                            alt="NOTHING Phone 2a">
+                    </div>
+                    <div class="info">
+                        <h3>NOTHING Phone 2a</h3>
+                        <p>The smartphone launched by Nothing. It features a 6.7-inch AMOLED display with a resolution
+                            of 1080 x 2412 pixels and a 120Hz refresh rate.
+                            The device is powered by the <strong>Mediatek Dimensity 7200 Pro</strong> chipset, which is
+                            built on a 4 nm fabrication process.
+                            It comes with three memory configurations: 8/128 GB, 8/256 GB, and 12/256 GB.</p>
+                        <div class="price">&#8377 29998/-</div>
+                        <a href="#" class="on">Learn More</a>
+                    </div>
+                    <div class="Pcard">
+                        <div class="image">
+                            <img src="https://imgs.search.brave.com/iNcxOamFY23Wdw3L4UvNbfF9G4pTup2JmKWNufMUOqU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vaGhhQmh6/NlpjSG5yMkVkTXNM/NXFuT2JZTjlkeE5r/V2dzZHFOMGlMbjY5/by9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl6/YUc5dy9MblZ5WW1G/dWNtVndkV0pzL2FX/TXVZMjl0TG0xNUwy/TmsvYmk5emFHOXdM/MlpwYkdWei9MMDV2/ZEdocGJtY3RVR2h2/L2JtVXRNbUV0VUd4/MWN5MHcvTUROZk5H/VTNOalEwWmpndC9P/R015TkMwMFpqTm1M/VGhpL1lqSXRaV1Zo/TVRNeU16Z3ovWTJN/NExtcHdaejkyUFRF/My9Nell4TlRNd01U/SW1kMmxrL2RHZzlN/VFEwTlE"
+                                alt="Nothing Phone 2a(plus)" />
+                        </div>
+                        <div class="info">
+                            <h3>NOTHING Phone 2a (plus)</h3>
+                            <p>Released 2024, 8.5mm thickness
+                                Android 14 based, up to 3 major upgrades
+                                AMOLED display with 1B colors, 120Hz, 2160Hz PWM, HDR10+, 700 nits (typ), 1100 nits
+                                (HBM), 1300 nits
+                                <strong> Mediatek Dimensity 7350 Pro (4 nm)</strong> powerful processor
+                                Internal storage of 256GB 8GB RAM, 256GB 12GB RAM
+                            </p>
+                            <div class="product-price">&#8377 34499/-</div>
+                            <a href="#" class="on">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="Pcard">
+                        <div class="image">
+                            <img src="https://imgs.search.brave.com/uDLOPpEvBlvLlHmI_ZSN_l4d_mUIXwCy-dX4ZeXBkR8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vUjhuOHow/blJsaHJFNGFzQWFW/UlBXdUd6dFNEYzct/WHdLSzNsQ0dBRnZD/by9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/TG0xbC9aR2xoTFdG/dFlYcHZiaTVqL2Iy/MHZhVzFoWjJWekwx/TXYvWVhCc2RYTXRi/V1ZrYVdFdC9iR2xp/Y21GeWVTMXpaWEoy/L2FXTmxMVzFsWkds/aEx6QmgvWmpnd01t/TXpMVEkyT0RRdC9O/REUwWmkxaE5ERmhM/VGRsL05URTJNR0U0/TURJeFpDNWYvWDBO/U01Dd3dMREUwTmpR/cy9OakF3WDFCVU1G/OVRXREUwL05qUmZW/akZmWDE4dWFuQm4"
+                                alt="NOTHING Phone 3a" />
+                        </div>
+                        <div class="info">
+                            <h3>NOTHING Phone 3a</h3>
+                            <p>The smartphone launched by Nothing, featuring a 6.77" AMOLED display with a 120Hz refresh
+                                rate, powered by the <strong>Snapdragon 7s Gen 3 </strong>chipset.
+                                It comes with a triple rear camera system, including a 50MP main sensor, and a 50MP
+                                front camera.
+                                The device is equipped with a 5000mAh battery and supports 50W fast charging.
+                                It runs on Android 15 with Nothing OS 3.1 and offers 8GB or 12GB of RAM with 128GB or
+                                256GB of storage</p>
+                            <div class="price">&#8377 39999/-</div>
+                            <a href="#" class="on">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="Bcontainer">
+            <div class="content">
+                <h2>About NOTHING Phones</h2>
+                <p>Nothing was founded by Carl Pei, co-founder of OnePlus, who left the company in October 2020 and
+                    raised $7 million from investors including Tony Fadell, Kevin Lin, Steve Huffman, and Casey Neistat.
+                    The company was officially announced in January 2021,[7] and soon acquired the brand assets of
+                    Essential Products.</p>
+                <p>The company launched its first product, the transparent ear 1 wireless earbuds, in July 2021. It
+                    later secured
+                    $50 million in funding and announced a partnership with Qualcomm.</p>
+                <p> The company also launched "CMF by Nothing", a sub-brand focused on affordable, design-led products.
+                    In November 2023, Nothing faced backlash over a messaging app that claimed to offer end-to-end
+                    encryption
+                    but was discovered to store messages in plaintext.</p>
+                <p>By 2024, Nothing had surpassed $1 billion in lifetime sales, doubling annual revenue to over $500
+                    million and
+                    selling more than 7 million devices. In India, it became the fastest-growing smartphone brand,
+                    with over 577% year-on-year growth.</p>
+                <a href="#" class="on">Our Story</a>
+            </div>
+            <div class="Aimage">
+                <img src="https://imgs.search.brave.com/vUZHjyF96gHrQkShNWWlayzP44f46Vi0UMuw09vniqY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3F5/TmZKZlRpb2RiQXF3/S3VBclk0VEouanBn"
+                    alt="NOTHING Logo">
+            </div>
+        </div>
+    </section>
+    <section id="state">
+        <div class="Acontainer">
+            <div class="Sgrid">
+                <div class="Sitem">
+                     <h3>10M+</h3>
+                    <p>Phones Sold Worldwide</p>
+                </div>
+                <div class="Sitem">
+                    <h3>150+</h3>
+                    <p>Countries Served</p>
+                </div>
+                <div class="Sitem">
+                    <h3>98%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+                <div class="Sitem">
+                    <h3>250+</h3>
+                    <p>Technology Patents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="Acontainer">
+            <h2 class="feature-title"> Contact For More Information </h2>
+                <div class="Ccontainer"> 
+                    <div class="Cinfo">
+                        <h3> Contact Information</h3>
+                            <p>Have questions about our products or interested in becoming a distributor? Our team is ready to help.</p>
+                            <div class="details">
+                                <div class="Cdetail">
+                                    <img src="https://imgs.search.brave.com/Xa-MuHREcAjKLtk86P_hBT_MSgVC5-5yEVjBy2PXOtQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDAv/NTMyLzkxNC9zbWFs/bC9sb2NhdGlvbjct/MDEuanBn" alt="address">
+                                       <span>F1-Chennai: No. New 18/1. Old # 14/6, Vasu Street, Kilpauk, (Behind Ega Theater), Chennai 600010</span>
+                                <div class="Cdetail">
+                                    <img src="https://imgs.search.brave.com/0jKBq0axtGekpTyohgS3uTNbqThHReC1WfO4aYiMCxo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjAv/MTk4LzAwNi9zbWFs/bC9waG9uZS1pY29u/LTNkLXJlbmRlcmlu/Zy1pbGx1c3RyYXRp/b24tZnJlZS12ZWN0/b3IuanBn" alt="mobile number">
+                                       <span>+91 1800-555-290</span>
+                                </div>
+                                <div class="Cdetail">
+                                    <img src="https://imgs.search.brave.com/5_mfUwFUBe-solLiE9ARlkW5pgJLBgr1JOG6I_RGBsQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDAv/NTU0LzEzOS9zbWFs/bC9fXzAwMS5qcGc" alt="mail address">
+                                        <span>info@nothingphone.com</span>
+                                </div>
+                                </div>
+                            </div>
+                           <div class="Cform">
+                               <form>
+                                   <div class="Cgroup">
+                                       <label for="name">Name</label>
+                                       <input type="text" id="name" placeholder="Your Name">
+                                    </div>
+                                    <div class="Cgroup">
+                                       <label for="email">Email</label>
+                                       <input type="email" id="email" placeholder="Your Email">
+                                    </div>
+                                    <div class="Cgroup">
+                                       <label for="mob">mobile no.</label>
+                                       <input type="tel" id="mob" placeholder="XXXXXXXXXX">
+                                    </div>
+                                    <div class="Cgroup">
+                                       <label for="message">Message</label>
+                                       <textarea id="message" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="on"> Send Message</button>
+                               </form>
+                           </div> 
+                    </div>
+                </div>
+        </div>
+    </section>
+    <footer>
+        <div class="Acontainer">
+          <div class="foot">
+                 <div class="tagline">
+                  <h4>NOTHING Phones</h4>
+                  <p>Innovating mobile technology to create devices that are powerful, beautiful, and intuitive.</p>
+                 </div>
+            <div class="tagline">
+              <h4>Quick Links</h4>
+               <ul class="listing">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#product">Products</a></li>
+                  <li><a href="#feature">Features</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+               </ul>
+             </div>
+             <div class="tagline">
+              <h4>Support</h4>
+               <ul class="listing">
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Warranty</a></li>
+                  <li><a href="#">Repair Services</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Shipping Policy</a></li>
+               </ul>
+             </div>
+             <div class="tagline">
+               <h4>Follow Us</h4>
+                 <div class="links">
+                  <a href="https://www.facebook.com/p/Nothing-Technology-100068017345365/"><img src="https://imgs.search.brave.com/N8b7EHmBwIoyl0T_OIo_OZPYYPukHd9V-KrVu9LN5fA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pY29u/cy5pY29uYXJjaGl2/ZS5jb20vaWNvbnMv/aG9wc3RhcnRlci9y/b3VuZGVkLXNxdWFy/ZS8xMjgvU29jaWFs/LU5ldHdvcmstRmFj/ZWJvb2staWNvbi5w/bmc" width="28px" height="28px" alt="Facebook" /></a>
+                  <a href="https://x.com/nothingindia?lang=en"><img src="https://imgs.search.brave.com/j8EToeGZfwKAD-hnRVhWl0cYdoxvClaP7LZwfWWHR7s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvdHdpdHRlci9z/bWFsbC90d2l0dGVy/X1BORzMyLnBuZw" width="28px" height="28px" alt="Twitter/X" /></a>
+                  <a href="https://www.instagram.com/nothing/"><img src="https://imgs.search.brave.com/nb3JR3HhVttcwHVxGiM6-aQbCLo4iSEBlbuO1u4u7Ag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTgv/OTEwLzY5Ny9zbWFs/bC9pbnN0YWdyYW0t/bW9iaWxlLWFwcC1s/b2dvLWluc3RhZ3Jh/bS1hcHAtaWNvbi1p/Zy1hcHAtZnJlZS1m/cmVlLXZlY3Rvci5q/cGc" width="28px" height="28px" alt="Instagram" /></a>
+                  <a href="https://www.linkedin.com/pulse/say-hello-nothing-phone-3a-collection-trusted-reviews-bjmxc"><img src="https://imgs.search.brave.com/PzlmJN9bVFcK2af6DEW7m7zYhbLFa6pJ3D29mXXSu4w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTgv/OTEwLzcyMS9zbWFs/bC9saW5rZWRpbi1s/b2dvLWxpbmtlZGlu/LXN5bWJvbC1saW5r/ZWRpbi1pY29uLWZy/ZWUtZnJlZS12ZWN0/b3IuanBn" width="28px" height="28px" alt="LinkedIn" /></a>
+                  <a href="https://www.youtube.com/@NothingTechnology"><img src="https://imgs.search.brave.com/hGuaL6tAOjjFiNOqq_aYzaQnuvcprD_BwaO_yYxxOeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTEv/OTk4LzE3My9zbWFs/bC95b3V0dWJlLWlj/b24tZnJlZS12ZWN0/b3IuanBn" width="28px" height="28px" alt="YouTube" /></a> 
+                 </div>
+             </div>
+          </div>
+          <div class="copyright">
+                <p>& copy; 2023 TechNova Mobile Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
